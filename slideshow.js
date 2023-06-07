@@ -1,7 +1,7 @@
 var i = 0;
 var images = [];
 var captions = [];
-var time = 3000;
+var time = 5000;
 
 images[0] = "img1.jpg";
 images[1] = "img2.jpg";
