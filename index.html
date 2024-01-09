@@ -2,17 +2,150 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="mediaqueries.css"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home | Camilo Becerra </title>
   </head>
   <body>
-  <h1>Camilo Becerra</h1>
-  <a class="main" href="Resume.docx" download>Resume</a>
-  <a class="main" href="hobbies.html">Hobbies</a>
-  <a class="main" href="education.html">Education</a>
-  <a class="main" href="pics.html">Pictures</a>
-  <img class="me" src="imgme.jpg" width="382" length="450"/>   
-  <p>Welcome to my website! My name is Camilo Becerra. I was born in Toronto, Canada. I am Colombian and have lived in Colombia most of my life. I am a high school student graduating this year. I hope to continue my career studying Computer Science in university. I am very interested in various topics that I share in this site. Please take your time to explore it!</p>
-</body>
+    <script src="script.js"></script>
+    <nav id="desktop-nav">
+      <div class="name">Camilo Becerra</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="mobile-nav">
+      <div class="name">Camilo Becerra</div>
+      <div class="stack-menu">
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="about">
+        <div class="section-container">
+        <div class="profile-pic">
+          <img id="me" src="imgs/imgme.jpg">
+        </div>
+        <div class="profile-info">
+          <div>
+            <p id="name">Camilo Becerra</p>
+            <p>Applied Mathematics & Computer Science Student</p>
+          </div>
+          <div class="links">
+            <a href="imgs/Resume.pdf" download><button>Download Resume</button></a>
+            <a href="https://www.linkedin.com/in/camilo-becerra-72b7252a3/"><img id="img" src="imgs/linkedin.png"></a>
+            <a href="https://github.com/camiloabecerra"><img id="img" src="imgs/github.png"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <div class="section-container">
+        <h2 class="section-title">Experience</h2>
+        <div>
+          <table id="experience-table">
+            <tr>
+              <td>
+                <h3>Education</h3>
+                <div id="this-div">
+                  <p> Brown University
+                    <li>Applied Mathematics & Computer Science</li>
+                    <li>Entrepreneurship Certificate</li>
+                  </p> 
+                </div>
+                <div>
+                  <p> Colegio Los Nogales
+                    <li>High School Diploma</li>
+                    <li>AP Capstone Diploma</li>
+                  </p>
+                </div>
+              </td>
+              <td>
+                <h3>Skills</h3>
+                <div>
+                  <p> Frontend
+                    <li>HTML/CSS</li>
+                  </p>
+                </div>
+                <div>
+                  <p> Backend
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C/C++</li>
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="section-container">
+        <h2 class="section-title">Latest Projects</h2>
+        <div class="all-projects">
+        <table class="projects">
+          <tr>
+            <td class="project-title">Portfolio Website</td>
+          </tr>
+          <tr>
+            <td><img class="project-img" id="img1" src="imgs/project1.png"></td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/camiloabecerra/camiloabecerra.github.io"><button id="project-button">GitHub</button></a></td>
+          </tr>
+        </table>
+        <table class="projects">
+          <tr>
+            <td class="project-title" id="title2" >Number Notation Converter</td>
+          </tr>
+          <tr>
+            <td><img class="project-img" id="img2" src="imgs/project2.png"></td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/camiloabecerra/Number-Notation-Converter"><button id="project-button">GitHub</button></a></td>
+          </tr>
+        </table>
+        <table class="projects">
+          <tr>
+            <td class="project-title">ML Fake News Detector</td>
+          </tr>
+          <tr>
+            <td><img class="project-img" id="img3" src="imgs/project3.png"></td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/camiloabecerra/fake-news-detector"><button id="project-button">GitHub</button></a></td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="section-container">
+        <center>
+          <h2>Contact Information</h2>
+          <ul id="contact-list">
+            <li id="contact-info-1"><a href="mailto:camilo_becerra@brown.edu">Email</a></li>
+            <li id="contact-info-2"><a href="https://www.linkedin.com/in/camilo-becerra-72b7252a3/">LinkedIn</a></li>
+          </ul>
+        </center>
+      </div>
+    </section>
+    <a id="return" href="index.html">Home</a>
+  </body>
 </html>
